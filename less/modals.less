@@ -81,7 +81,6 @@
 // Top section of the modal w/ title and dismiss
 .modal-header {
   padding: @modal-title-padding;
-  border-bottom: 1px solid @modal-header-border-color;
   min-height: (@modal-title-padding + @modal-title-line-height);
 }
 // Close icon
@@ -100,6 +99,16 @@
 .modal-body {
   position: relative;
   padding: @modal-inner-padding;
+  padding-top: 0;
+
+  // Forms in a Modal :)
+  form {
+    .form-group {
+      p { margin: 0; }
+    }
+    
+    .btn { width: 100%; }
+  }
 }
 
 // Footer (for actions)
