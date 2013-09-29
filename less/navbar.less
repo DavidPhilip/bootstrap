@@ -20,9 +20,16 @@
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
+
+    &.ab > .container {
+      margin: 0 auto;
+      padding: 0;
+    }
   }
 
-  &.ab { border: none; }
+  &.ab {
+    border: none;
+  }
 }
 
 
@@ -114,8 +121,8 @@
   margin-left:  -@navbar-padding-horizontal;
 
   @media (min-width: @grid-float-breakpoint) {
-    margin-right: 0;
-    margin-left:  0;
+    margin: 0; 
+    padding: 0;
   }
 }
 
@@ -192,9 +199,8 @@
       .opacity(.75);
       display: block;
       height: 100%;
-      margin: 24px auto 0;
+      margin: 0 auto;
       position: relative;
-      width: 340px;
       z-index: 3;
 
       &:hover,
@@ -208,7 +214,6 @@
         height: 90px;
         margin: 0 auto;
         position: absolute;
-        width: 340px;
       }
     }
 
@@ -221,9 +226,30 @@
       padding: 0;
       position: absolute;
       text-align: center;
-      top: -596px;
       width: 100%;
       z-index: 1;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      a {
+        margin-top: 12px;
+        &, .logo {
+          width: @navbar-emblem-width-sm;
+        }
+      }
+
+      .circle { top: -617px; }
+    }
+
+    @media (min-width: @screen-md-min) {
+      a {
+        margin-top: 24px;
+        &, .logo {
+          width: @navbar-emblem-width-lg;
+        }
+      }
+
+      .circle { top: -596px; }
     }
 
     @media (max-width: @screen-xs-max) {
@@ -332,13 +358,39 @@
     }
 
     &.ab {
-      > li > a {
-        padding-top: ((@navbar-height-desktop - @line-height-computed) / 2);
-        padding-bottom: ((@navbar-height-desktop - @line-height-computed) / 2);
+      > li {
+        > a {
+          text-align: center;
+          padding-top: ((@navbar-height-desktop - @line-height-computed) / 2);
+          padding-bottom: ((@navbar-height-desktop - @line-height-computed) / 2);
+        }
       }
     }
   }
 
+  &.ab {
+    > li {
+      .home &, .home_organizers &, .home_athletes & {
+        @media (min-width: @screen-sm-min) {
+          width: ((@container-sm - @navbar-emblem-width-sm) / 4);
+          &.space_for_emblem {
+            margin-right: @navbar-emblem-width-sm;
+          }
+        }
+
+        @media (min-width: @screen-md-min) {
+          width: ((@container-md - @navbar-emblem-width-lg) / 4);
+          &.space_for_emblem {
+            margin-right: @navbar-emblem-width-lg;
+          }
+        }
+
+        @media (min-width: @screen-lg-min) {
+          width: ((@container-lg - @navbar-emblem-width-lg) / 4);
+        }
+      }
+    }
+  }
 }
 
 
