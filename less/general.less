@@ -1,0 +1,43 @@
+.icon-spin {
+  margin: 0 10px 0 0;
+  opacity: 1;
+}
+
+noscript {
+  .opacity(0.95);
+  
+  background-color: @gray-darker;
+  color: @gray-lighter;
+  display: table;
+  font-size: 2em;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+
+  p {
+    .opacity(1);
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+/* OLDIE HANDLING */
+.oldie {
+  label { display: inline-block; }
+}
+
+/* LOGIN */
+
+#login_modal {
+  
+  h4 { 
+    text-align: center;
+    color: @gray-darker;
+  }
+
+  .modal-dialog {
+    width: 300px;
+  }
+}

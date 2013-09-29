@@ -21,6 +21,8 @@
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
   }
+
+  &.ab { border: none; }
 }
 
 
@@ -34,6 +36,11 @@
 
   @media (min-width: @grid-float-breakpoint) {
     float: left;
+
+    &.ab {
+      width: 100%;
+      position: relative;
+    }
   }
 }
 
@@ -76,6 +83,11 @@
 
     &.in {
       overflow-y: visible;
+    }
+
+    &.ab {
+      position: relative;
+      z-index: 2;
     }
 
     // Account for first and last children spacing
@@ -161,6 +173,76 @@
     .navbar > .container & {
       margin-left: -@navbar-padding-horizontal;
     }
+
+    .navbar > .container &.ab {
+      margin-left: 0;
+    }
+  }
+
+  &.ab {
+    float: none;
+    height: 95px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+
+    a {
+      .transition(opacity 0.5s);
+      .opacity(.75);
+      display: block;
+      height: 100%;
+      margin: 24px auto 0;
+      position: relative;
+      width: 340px;
+      z-index: 3;
+
+      &:hover,
+      &.active { .opacity(1); }
+
+      .logo {
+        .text-hide;
+        background: url("../img/general/agilitybase_logo.png") no-repeat center center transparent;
+        background-size: 100% auto;
+        display: block;
+        height: 90px;
+        margin: 0 auto;
+        position: absolute;
+        width: 340px;
+      }
+    }
+
+    .circle {
+      background: url("../img/home/circle.png") center top no-repeat transparent;
+      background-size: 734px auto;
+      height: 734px;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      top: -596px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      a {
+        margin: 10px auto;
+        height: 50px;
+        width: 180px;
+        
+        .logo {
+          background-position: center -11px;
+          height: 30px;
+          width: 180px;
+        }
+      }
+
+      .circle {
+        display: none;
+      }
+    }
   }
 }
 
@@ -179,6 +261,7 @@
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: @border-radius-base;
+  z-index: 2;
 
   // Bars
   .icon-bar {
@@ -245,6 +328,13 @@
       > a {
         padding-top: ((@navbar-height - @line-height-computed) / 2);
         padding-bottom: ((@navbar-height - @line-height-computed) / 2);
+      }
+    }
+
+    &.ab {
+      > li > a {
+        padding-top: ((@navbar-height-desktop - @line-height-computed) / 2);
+        padding-bottom: ((@navbar-height-desktop - @line-height-computed) / 2);
       }
     }
   }
@@ -513,6 +603,21 @@
         background-color: @navbar-inverse-link-hover-bg;
       }
     }
+
+    &.ab {
+      > li > a {
+        &,
+        &:hover,
+        &:focus {
+          .transition(~"color 0.3s, background-color 0.3s");
+        }
+
+        &:hover {
+          background-color: lighten(@gray-darker, 2%);
+        }
+      }
+    }
+
     > .active > a {
       &,
       &:hover,
