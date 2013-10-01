@@ -1,3 +1,17 @@
+body, html {
+  height: 100%;
+    
+  .header {
+    height: 95px;
+    margin-bottom: 70px;
+    
+    @media (max-width: @screen-xs-max) {
+      height: 50px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .icon-spin {
   margin: 0 10px 0 0;
   opacity: 1;
@@ -23,6 +37,8 @@ noscript {
   }
 }
 
+label { display: none; }
+
 /* OLDIE HANDLING */
 .oldie {
   label { display: inline-block; }
@@ -32,7 +48,7 @@ noscript {
 
 #login_modal {
   
-  h4 { 
+  h3 { 
     text-align: center;
     color: @gray-darker;
   }

@@ -1,5 +1,48 @@
 body {
-  background: url("../img/home/home_bg.jpg") no-repeat top center #202020;
-  
-  label { display: none; }
+  background-color: @gray-darker;
+
+  #dog_bg {
+    background: url("../img/home/home_bg.jpg") no-repeat top center transparent;
+    height: 100%;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+
+    @media (max-width: @screen-xs-max) {
+      -moz-background-size: auto 100%;
+      -webkit-background-size: auto 100%;
+      background-size: auto 100%;
+      position: fixed;
+      top: 50px;
+    }
+  }
+
+  #features {
+    position: relative;
+    z-index: 1;
+
+    .feature {
+      .icon-stack {
+        font-size: 75px;
+        i:first-child { color: @gray-darker; }
+        i:last-child { color: @gray-light; }
+
+        i.icon-thumbs-up {
+          top: -4px;
+          left: 2px;
+        }
+
+        i.icon-bell {
+          top: -3px;
+          left: 1px;
+        }
+
+        i.icon-plane { top: 2px; }
+        i.icon-envelope { top: -3px; }
+        i.icon-exchange { top: -2px; }
+      }
+    }   
+
+    &, h3, p { text-align: center; }
+  }
 }

@@ -253,6 +253,8 @@
     }
 
     @media (max-width: @screen-xs-max) {
+      height: 50px;
+      
       a {
         margin: 10px auto;
         height: 50px;
@@ -363,6 +365,13 @@
           text-align: center;
           padding-top: ((@navbar-height-desktop - @line-height-computed) / 2);
           padding-bottom: ((@navbar-height-desktop - @line-height-computed) / 2);
+
+          &.mode-switch {
+            border-radius: @border-radius-base;
+            color: #fff;
+            margin: 27px 20px;
+            padding: 10px 0px;
+          }
         }
       }
     }
@@ -370,6 +379,14 @@
 
   &.ab {
     > li {
+      .home &, .home_athletes & {
+        .mode-switch { background-color: @blue-organizers; }
+      }
+
+      .home_organizers & {
+        .mode-switch { background-color: @green-athletes; }
+      }
+
       .home &, .home_organizers &, .home_athletes & {
         @media (min-width: @screen-sm-min) {
           width: ((@container-sm - @navbar-emblem-width-sm) / 4);
@@ -387,6 +404,12 @@
 
         @media (min-width: @screen-lg-min) {
           width: ((@container-lg - @navbar-emblem-width-lg) / 4);
+        }
+
+        @media (max-width: @screen-xs-max) {
+          .mode-switch {
+            background-color: transparent;
+          }
         }
       }
     }
@@ -666,6 +689,15 @@
 
         &:hover {
           background-color: lighten(@gray-darker, 2%);
+        }
+
+        .home_organizers&.mode-switch:hover {
+          background-color: lighten(@green-athletes, 5%)
+        }
+
+        .home_athletes&.mode-switch:hover,
+        .home&.mode-switch:hover {
+          background-color: lighten(@blue-organizers, 5%)
         }
       }
     }
