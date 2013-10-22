@@ -1,0 +1,80 @@
+body, html {
+  height: 100%;
+    
+  .header {
+    height: 95px;
+    margin-bottom: 70px;
+    
+    @media (max-width: @screen-xs-max) {
+      height: 50px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.icon-spin {
+  margin: 0 10px 0 0;
+  opacity: 1;
+}
+
+noscript {
+  .opacity(0.95);
+  
+  background-color: @gray-darker;
+  color: @gray-lighter;
+  display: table;
+  font-size: 2em;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+
+  p {
+    .opacity(1);
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+label { display: none; }
+
+/* OLDIE HANDLING */
+.oldie {
+  label { display: inline-block; }
+}
+
+/* LOGIN */
+
+#login_modal {
+  
+  h3 { 
+    text-align: center;
+    color: @gray-darker;
+  }
+
+  .modal-dialog {
+    width: 300px;
+  }
+  
+  .form-group.username {
+    position: relative;
+    .icon-question-sign {
+      color: @gray;
+      position: absolute;
+      right: 10px;
+      text-decoration: none;
+      top: 3px;
+      
+      &:hover, &:focus { color: @gray-lighter; }
+    }
+  }
+}
+
+/* ICONS */
+
+.icon-stack .icon-circle-custom {
+  border: 3px solid;
+  border-radius: 100px;
+}
+
