@@ -1,0 +1,53 @@
+body, html {
+  height: 100%;
+    
+  .header {
+    height: 95px;
+    margin-bottom: 70px;
+    
+    @media (max-width: @screen-xs-max) {
+      height: 50px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.icon-spin {
+  margin: 0 10px 0 0;
+  opacity: 1;
+}
+
+noscript {
+  .opacity(0.95);
+  
+  background-color: @gray-darker;
+  color: @gray-lighter;
+  display: table;
+  font-size: 2em;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+
+  p {
+    .opacity(1);
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+label { display: none; }
+
+/* OLDIE HANDLING */
+.oldie {
+  label { display: inline-block; }
+}
+
+/* ICONS */
+
+.icon-stack .icon-circle-custom {
+  border: 3px solid;
+  border-radius: 100px;
+}
+
