@@ -55,12 +55,13 @@ body {
     h2 {
       margin: 20px 0 30px 0;
       
-      .icon-stack {
-        height: 50px;
-        line-height: 50px;
-        margin: -2px 0px 0 -11px;
-        vertical-align: -15%;
-        width: 50px;
+      .fa-stack {
+        height: 60px;
+        line-height: 60px;
+        margin: -2px 0 0 0;
+        width: 60px;
+      
+        .fa-user, .fa-flag { font-size: 32px; }
       }
     }
     
@@ -82,6 +83,7 @@ body {
       i {
         position: absolute;
         right: 20px;
+        top: 20px;
       }
     }
   }
@@ -100,23 +102,25 @@ body {
     }
      
     .feature {
-      .icon-stack {
+      .fa-stack {
+        font-size: 5em;
+        
         i:first-child { color: @gray-darker; }
         i:last-child { color: @gray-light; }
 
-        i.icon-thumbs-up {
+        i.fa-thumbs-up {
           top: -4px;
           left: 2px;
         }
 
-        i.icon-bell {
+        i.fa-bell {
           top: -3px;
           left: 1px;
         }
 
-        i.icon-plane { top: 2px; }
-        i.icon-envelope { top: -3px; }
-        i.icon-exchange { top: -2px; }
+        i.fa-plane { top: 2px; }
+        i.fa-envelope { top: -3px; }
+        i.fa-exchange { top: -2px; }
       }
     }   
 
