@@ -10,15 +10,6 @@
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
-
-
-  // Account for hiding of scrollbar
-  body&,
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    margin-right: 15px;
-    margin-right: 0;
-  }
 }
 
 // Container that the modal scrolls within
@@ -26,51 +17,26 @@
   display: none;
   overflow: auto;
   overflow-y: scroll;
-  outline: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: @zindex-modal-background;
-  
-  h3 { 
-    text-align: center;
-    color: @gray-darker;
-  }
-  
+
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     .translate(0, -25%);
     .transition-transform(~"0.3s ease-out");
   }
   &.in .modal-dialog { .translate(0, 0)}
-  
-  .help {
-    .border-bottom-radius(@border-radius-small);
-    background-color: @gray-darker;
-    padding: 20px;
-    
-    h4 {
-      color: #fff;
-      margin: 0;
-      padding: 0 0 10px 0;
-    }
-    
-    a {
-      color: @gray;
-    }
-  }
-  
-  p:last-child { margin: 0; }
 }
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
   width: auto;
-  padding: 10px;
+  margin: 10px;
   z-index: (@zindex-modal-background + 10);
 }
 
@@ -81,15 +47,10 @@
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
   border-radius: @border-radius-large;
-  .box-shadow(0 9px 90px rgba(0,0,0,1));
+  .box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: none;
-  
-  ul {
-    list-style-position: inside;
-    padding: 0;
-  }
 }
 
 // Modal background
@@ -103,13 +64,14 @@
   background-color: @modal-backdrop-bg;
   // Fade for backdrop
   &.fade { .opacity(0); }
-  &.in { .opacity(.7); }
+  &.in { .opacity(.5); }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
   padding: @modal-title-padding;
+  border-bottom: 1px solid @modal-header-border-color;
   min-height: (@modal-title-padding + @modal-title-line-height);
 }
 // Close icon
@@ -128,16 +90,6 @@
 .modal-body {
   position: relative;
   padding: @modal-inner-padding;
-  padding-top: 0;
-
-  // Forms in a Modal :)
-  form {
-    .form-group {
-      p { margin: 0; }
-    }
-    
-    .btn { width: 100%; }
-  }
 }
 
 // Footer (for actions)
@@ -168,12 +120,10 @@
 
   .modal-dialog {
     width: 600px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin: 30px auto;
   }
   .modal-content {
-    .box-shadow(0 9px 90px rgba(0,0,0,1));
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 
 }
-

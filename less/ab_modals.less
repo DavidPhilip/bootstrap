@@ -1,4 +1,59 @@
-/* AGILITYBASE MODALS */
+
+.ab .modal {
+  outline: none;
+  
+  h3 { 
+    text-align: center;
+    color: @gray-darker;
+  }
+  
+  .modal-header {
+    border-bottom: none;
+  }
+  
+  .modal-body {
+    padding-top: 0;
+
+    // Forms in a Modal :)
+    form {
+      .form-group {
+        p { margin: 0; }
+      }
+      
+      .btn { width: 100%; }
+    }
+    
+    .modal-content {
+      .box-shadow(0 9px 90px rgba(0,0,0,1));
+    }
+  }
+  
+  .help {
+    .border-bottom-radius(@border-radius-small);
+    background-color: @gray-darker;
+    padding: 20px;
+    
+    h4 {
+      color: #fff;
+      margin: 0;
+      padding: 0 0 10px 0;
+    }
+    
+    a {
+      color: @gray;
+    }
+  }
+}
+
+.ab .modal-backdrop {
+  &.in { .opacity(.7); }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  .modal-content {
+    .box-shadow(0 9px 90px rgba(0,0,0,1));
+  }
+}
 
 /* LOGIN */
 

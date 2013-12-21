@@ -6,21 +6,17 @@
 // Base styles
 // --------------------------------------------------
 
-// Core styles
 .btn {
   display: inline-block;
-  padding: @padding-base-vertical @padding-base-horizontal;
   margin-bottom: 0; // For input.btn
-  font-size: @font-size-base;
   font-weight: @btn-font-weight;
-  line-height: @line-height-base;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
-  border-radius: @border-radius-base;
   white-space: nowrap;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
 
   &:focus {
@@ -48,12 +44,6 @@
     .opacity(.65);
     .box-shadow(none);
   }
-  
-  &,
-  &:hover,
-  &:focus {
-    .transition(~"color 0.15s, background-color 0.15s");
-  }
 }
 
 
@@ -61,9 +51,7 @@
 // --------------------------------------------------
 
 .btn-default {
-  body.organizers &, body.athletes &, body.organizers &.override, body.athletes &.override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
-  body.athletes & { .button-variant(@btn-primary-color; @green-athletes; @green-athletes); }
-  body.organizers & { .button-variant(@btn-primary-color; @blue-organizers; @blue-organizers); }
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
 }
 .btn-primary {
   .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
@@ -85,15 +73,6 @@
   .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
 }
 
-.btn-register.organizers,
-.btn-organizers {
-  .button-variant(@btn-primary-color; @blue-organizers; @blue-organizers);
-}
-
-.btn-register.athletes,
-.btn-athletes {
-  .button-variant(@btn-primary-color; @green-athletes; @green-athletes);
-}
 
 // Link buttons
 // -------------------------
@@ -138,21 +117,16 @@
 // Button Sizes
 // --------------------------------------------------
 
-.btn-vlg {
-  .button-size(@padding-verylarge-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small; @padding-verylarge-vertical; @padding-large-horizontal; (@padding-verylarge-vertical - 4); @padding-large-horizontal);
-}
-
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
-  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small; @padding-large-vertical; @padding-large-horizontal; (@padding-large-vertical - 4); @padding-large-horizontal);
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 }
-.btn-sm,
-.btn-xs {
+.btn-sm {
   // line-height: ensure proper height of button next to small input
   .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
 .btn-xs {
-  padding: 1px 5px;
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
 
 

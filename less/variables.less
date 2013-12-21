@@ -9,23 +9,20 @@
 // Grays
 // -------------------------
 
-@gray-darker:            #202020; // lighten(#000, 13.5%); // #222
+@gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             #d2d2d2; // lighten(#000, 60%);   // #999
+@gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
-
 
 // Brand colors
 // -------------------------
 
-@brand-primary:         #2f528c;
+@brand-primary:         #428bca;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 @brand-info:            #5bc0de;
-@green-athletes:        #418a43;
-@blue-organizers:       #2f528c;
 
 // Scaffolding
 // -------------------------
@@ -42,18 +39,18 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "NiveauGroteskRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       'MuseoSlab-500', Georgia, "Times New Roman", Times, serif;
-@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          14px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
-@font-size-h1:            floor(@font-size-base * 2.60); // ~36px
+@font-size-h1:            floor(@font-size-base * 2.6); // ~36px
 @font-size-h2:            floor(@font-size-base * 2.15); // ~30px
-@font-size-h3:            ceil(@font-size-base * 1.70); // ~24px
+@font-size-h3:            ceil(@font-size-base * 1.7); // ~24px
 @font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
@@ -81,13 +78,14 @@
 @padding-base-vertical:          6px;
 @padding-base-horizontal:        12px;
 
-@padding-verylarge-vertical:     18px;
-
 @padding-large-vertical:         10px;
 @padding-large-horizontal:       16px;
 
 @padding-small-vertical:         5px;
 @padding-small-horizontal:       10px;
+
+@padding-xs-vertical:            1px;
+@padding-xs-horizontal:          5px;
 
 @line-height-large:              1.33;
 @line-height-small:              1.5;
@@ -151,18 +149,18 @@
 // Forms
 // -------------------------
 
-@input-bg:                       @gray-darker;
+@input-bg:                       #fff;
 @input-bg-disabled:              @gray-lighter;
 
-@input-color:                    @gray-lighter;
+@input-color:                    @gray;
 @input-border:                   #ccc;
-@input-border-radius:            @border-radius-small;
-@input-border-focus:             #000;
+@input-border-radius:            @border-radius-base;
+@input-border-focus:             #66afe9;
 
 @input-color-placeholder:        @gray-light;
 
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
-@input-height-large:             (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @gray-dark;
@@ -190,8 +188,6 @@
 @dropdown-link-disabled-color:   @gray-light;
 
 @dropdown-header-color:          @gray-light;
-
-@dropdown-caret-color:           #000;
 
 
 // COMPONENT VARIABLES
@@ -251,8 +247,13 @@
 @grid-columns:              12;
 // Padding, to be divided by two and applied to the left and right of all columns
 @grid-gutter-width:         30px;
-// Point at which the navbar stops collapsing
+
+// Navbar collapse
+
+// Point at which the navbar becomes uncollapsed
 @grid-float-breakpoint:     @screen-sm-min;
+// Point at which the navbar begins collapsing
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
 
 // Navbar
@@ -260,7 +261,6 @@
 
 // Basics of a navbar
 @navbar-height:                    50px;
-@navbar-height-desktop:            95px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
@@ -269,8 +269,6 @@
 @navbar-default-color:             #777;
 @navbar-default-bg:                #f8f8f8;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
-@navbar-emblem-width-lg:           340px;
-@navbar-emblem-width-sm:           250px;
 
 // Navbar links
 @navbar-default-link-color:                #777;
@@ -296,8 +294,8 @@
 //
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
-@navbar-inverse-bg:                         @gray-darker;
-@navbar-inverse-border:                     none; //darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-bg:                         #222;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @gray-light;
@@ -329,7 +327,6 @@
 @nav-disabled-link-hover-color:             @gray-light;
 
 @nav-open-link-hover-color:                 #fff;
-@nav-open-caret-border-color:               #fff;
 
 // Tabs
 @nav-tabs-border-color:                     #ddd;
@@ -376,26 +373,26 @@
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
 @jumbotron-bg:                   @gray-lighter;
-
 @jumbotron-heading-color:        inherit;
+@jumbotron-font-size:            ceil(@font-size-base * 1.5);
 
 
 // Form states and alerts
 // -------------------------
 
-@state-success-text:             #468847;
+@state-success-text:             #3c763d;
 @state-success-bg:               #dff0d8;
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #3a87ad;
+@state-info-text:                #31708f;
 @state-info-bg:                  #d9edf7;
 @state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
-@state-warning-text:             #c09853;
+@state-warning-text:             #8a6d3b;
 @state-warning-bg:               #fcf8e3;
 @state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
 
-@state-danger-text:              #b94a48;
+@state-danger-text:              #a94442;
 @state-danger-bg:                #f2dede;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 

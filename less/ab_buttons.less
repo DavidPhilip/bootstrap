@@ -1,0 +1,46 @@
+.btn-default {
+  body.organizers &, body.athletes &, body.organizers &.override, body.athletes &.override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
+  body.athletes & { .button-variant(@btn-primary-color; @green-athletes; @green-athletes); }
+  body.organizers & { .button-variant(@btn-primary-color; @blue-organizers; @blue-organizers); }
+}
+
+.ab {
+
+  .btn {
+    &,
+    &:hover,
+    &:focus {
+      .transition(~"color 0.15s, background-color 0.15s");
+    }
+  }
+
+  .btn-register.organizers,
+  .btn-organizers {
+    .button-variant(@btn-primary-color; @blue-organizers; @blue-organizers);
+  }
+
+  .btn-register.athletes,
+  .btn-athletes {
+    .button-variant(@btn-primary-color; @green-athletes; @green-athletes);
+  }
+
+  .btn-vlg {
+    .button-size(@padding-verylarge-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small; @padding-verylarge-vertical; @padding-large-horizontal; (@padding-verylarge-vertical - 4); @padding-large-horizontal);
+  }
+
+  .btn-lg {
+    // line-height: ensure even-numbered height of button next to large input
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small; @padding-large-vertical; @padding-large-horizontal; (@padding-large-vertical - 4); @padding-large-horizontal);
+  }
+  
+  .btn-sm,
+  .btn-xs {
+    // line-height: ensure proper height of button next to small input
+    .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  }
+  
+  .btn-xs {
+    padding: 1px 5px;
+  }
+
+}
