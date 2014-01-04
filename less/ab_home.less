@@ -1,5 +1,5 @@
 body {
-  background-color: @gray-darker;
+  &.home { background: none @gray-darker; }
 
   #dog_bg {
     background: url("../img/home/home_bg.jpg") no-repeat top center transparent;
@@ -90,11 +90,7 @@ body {
   
   #features {
     background-color: rgba(0, 0, 0, 0.1);
-    left: 0;
     margin-top: 45px;
-    padding: 30px 0;
-    position: absolute;
-    width: 100%;
      
     .features {
       margin: 0 auto;
@@ -103,10 +99,13 @@ body {
      
     .feature {
       .fa-stack {
-        font-size: 5em;
+        font-size: 3em;
         
         i:first-child { color: @gray-darker; }
-        i:last-child { color: @gray-light; }
+        i:last-child {
+          color: @gray-light;
+          font-size: 0.8em;
+        }
 
         i.fa-thumbs-up {
           top: -4px;
