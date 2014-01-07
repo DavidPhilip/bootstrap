@@ -1,7 +1,7 @@
 .btn-default {
-  body.organizers &, body.athletes &, body.organizers &.override, body.athletes &.override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
+  body.clubs &, body.athletes &, body.clubs &.override, body.athletes &.override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
   body.athletes & { .button-variant(@btn-primary-color; @green-athletes; @green-athletes); }
-  body.organizers & { .button-variant(@btn-primary-color; @blue-organizers; @blue-organizers); }
+  body.clubs & { .button-variant(@btn-primary-color; @blue-clubs; @blue-clubs); }
 }
 
 .ab {
@@ -14,9 +14,9 @@
     }
   }
 
-  .btn-register.organizers,
-  .btn-organizers {
-    .button-variant(@btn-primary-color; @blue-organizers; @blue-organizers);
+  .btn-register.clubs,
+  .btn-clubs {
+    .button-variant(@btn-primary-color; @blue-clubs; @blue-clubs);
   }
 
   .btn-register.athletes,

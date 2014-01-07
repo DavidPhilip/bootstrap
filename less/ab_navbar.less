@@ -152,14 +152,14 @@
   &.ab {
     > li {
       .home &, .home_athletes & {
-        .mode-switch { background-color: @blue-organizers; }
+        .mode-switch { background-color: @blue-clubs; }
       }
 
-      .home_organizers & {
+      .home_clubs & {
         .mode-switch { background-color: @green-athletes; }
       }
 
-      .dashboard &, .dashboard_organizers &, .dashboard_athletes & {
+      .dashboard &, .dashboard_clubs &, .dashboard_athletes & {
         @media (min-width: @screen-sm-min) {
           width: ((@container-sm - @navbar-emblem-width-sm) / 4);
           
@@ -199,7 +199,7 @@
         }
       }
       
-      .home &, .home_organizers &, .home_athletes & {
+      .home &, .home_clubs &, .home_athletes & {
         @media (min-width: @screen-sm-min) {
           width: ((@container-sm - @navbar-emblem-width-sm) / 4);
           &.space_for_emblem {
@@ -263,13 +263,13 @@
           background-color: lighten(@gray-darker, 2%);
         }
 
-        .home_organizers&.mode-switch:hover {
+        .home_clubs&.mode-switch:hover {
           background-color: lighten(@green-athletes, 5%)
         }
 
         .home_athletes&.mode-switch:hover,
         .home&.mode-switch:hover {
-          background-color: lighten(@blue-organizers, 5%)
+          background-color: lighten(@blue-clubs, 5%)
         }
       }
       

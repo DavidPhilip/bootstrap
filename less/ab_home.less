@@ -2,7 +2,13 @@ body {
   &.home { background: none @gray-darker; }
 
   #dog_bg {
-    background: url("../img/home/home_bg.jpg") no-repeat top center transparent;
+    //background: url("../img/home/home_bg.jpg") no-repeat top center @gray-darker;
+    background: url("../img/home/home_bg_1.jpg") no-repeat center center fixed @gray-darker; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
     height: 100%;
     position: fixed;
     top: 95px;
@@ -18,13 +24,24 @@ body {
   }
   
   #description, #features {
+    left: 0px;
     position: relative;
+    top: 90px;
+    width: 100%;
     z-index: 1;
+
+    @media (min-width: @screen-sm-min) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   
   #description {
     text-align: center;
     
+    .clubs h2 { color: @blue-clubs; }
+    .athletes h2 { color: @green-athletes; }
+
     h1 {
       line-height: 58px;
       margin: -5px 0 25px 0;
@@ -34,9 +51,6 @@ body {
       }
     }
     
-    .organizers h2 { color: @blue-organizers; }
-    .athletes h2 { color: @green-athletes; }
-    
     p { position: relative; }
     
     p span.line {
@@ -44,8 +58,9 @@ body {
       height: 1px;
       position: absolute;
       top: 15px;
-      width: 45%;
+      width: 47%;
       
+      @media (max-width: @screen-sm-max) { width: 46%; }
       @media (max-width: @screen-xs-max) { width: 39%; }
       
       &:first-child { left: 0; }
@@ -61,7 +76,7 @@ body {
         margin: -2px 0 0 0;
         width: 60px;
       
-        .fa-user, .fa-flag { font-size: 32px; }
+        .fa-user, .fa-users, .fa-flag { font-size: 32px; }
       }
     }
     
@@ -90,7 +105,7 @@ body {
   
   #features {
     background-color: rgba(0, 0, 0, 0.1);
-    margin-top: 45px;
+    margin-top: 80px;
      
     .features {
       margin: 0 auto;
