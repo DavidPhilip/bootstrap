@@ -1,7 +1,7 @@
 .btn-default {
-  body.clubs &, body.athletes &, body.clubs &.override, body.athletes &.override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
-  body.athletes & { .button-variant(@btn-primary-color; @green-athletes; @green-athletes); }
-  body.clubs & { .button-variant(@btn-primary-color; @blue-clubs; @blue-clubs); }
+  &, .primary { .button-variant(@btn-primary-color; @blue-clubs; @blue-clubs); }
+  .second { .button-variant(@btn-primary-color; @green-athletes; @green-athletes); }
+  &.override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
 }
 
 .ab {
@@ -12,16 +12,6 @@
     &:focus {
       .transition(~"color 0.15s, background-color 0.15s");
     }
-  }
-
-  .btn-register.clubs,
-  .btn-clubs {
-    .button-variant(@btn-primary-color; @blue-clubs; @blue-clubs);
-  }
-
-  .btn-register.athletes,
-  .btn-athletes {
-    .button-variant(@btn-primary-color; @green-athletes; @green-athletes);
   }
 
   .btn-vlg {

@@ -11,6 +11,12 @@
     left: 50%;
     position: absolute;
     top: 20%;
+    
+    @media (max-width: @screen-xs-max) {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
   }
 
   .modal-header {
@@ -68,7 +74,13 @@
   .modal-dialog {
     margin-left: -150px;
     width: 300px;
+    
+    @media (max-width: @screen-xs-max) {
+      margin: 0;
+      width: auto;
+    }
   }
+  
   
   .form-group.username {
     position: relative;
@@ -87,6 +99,11 @@
 /* REGISTRATION */
 
 #register_modal {
+  .modal-dialog {
+    margin-left: -300px;
+    width: 600px;
+  }
+  
   .form-group.terms {
     overflow: hidden;
     
