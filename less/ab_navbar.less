@@ -151,7 +151,7 @@
   
   &.ab {
     > li {
-      .dashboard &, .dashboard_clubs &, .dashboard_athletes & {
+      .dashboard & {
         @media (min-width: @screen-sm-min) {
           width: ((@container-sm - @navbar-emblem-width-sm) / 4);
           
@@ -191,7 +191,7 @@
         }
       }
       
-      .home &, .home_clubs &, .home_athletes & {
+      .home & {
         @media (min-width: @screen-sm-min) {
           width: ((@container-sm - @navbar-emblem-width-sm) / 4);
           &.space_for_emblem {
@@ -265,8 +265,8 @@
         }
       }
       
-      // Dropdown Athletes
-      .athletes & {
+      // Dropdown
+      & {
         > .open > a {
           &,
           &:hover,
