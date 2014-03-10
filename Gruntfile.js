@@ -55,7 +55,15 @@ module.exports = function(grunt) {
           'js/popover.js',
           'js/scrollspy.js',
           'js/tab.js',
-          'js/affix.js'
+          'js/affix.js',
+          
+          // Custom Bootstrap JS
+          'js/bootstrap-datepicker.js',
+          'js/bootstrap-hover-dropdown.min.js',
+          'js/typeahead.min.js',
+          'js/skrollr.min.js',
+          'js/serialize-object.min.js',
+          'js/locales/*.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
