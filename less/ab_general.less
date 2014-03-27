@@ -2,6 +2,12 @@ body, html {
   background-color: @gray-darker;
   //.img-retina("../../../img/general/black_denim.png"; "../../../img/general/black_denim@2x.png"; 200; 200);
   height: 100%;
+  
+  > div.ember-view { 
+    position: absolute;
+    top: 100px;
+    z-index: 9999;
+  }
     
   .header {
     height: 95px;
