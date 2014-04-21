@@ -1,5 +1,9 @@
 
-.ab .modal {
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.ab.modal {
   outline: none;
   
   h3 { 
@@ -13,47 +17,82 @@
     position: absolute;
     top: 20%;
     
-    @media (max-width: @screen-xs-max) {
-      position: relative;
-      left: 0;
-      top: 0;
+    .slick& {
+      margin-left: -150px;
+      width: 300px;
     }
-  }
-
-  .modal-header {
-    border-bottom: none;
-  }
-  
-  .modal-body {
-    padding-top: 0;
-
-    // Forms in a Modal :)
-    form {
-      .form-group {
-        p { margin: 0; }
+    
+    .fat& {
+      margin-left: -300px;
+      width: 600px;
+    }
+    
+    @media (max-width: @screen-xs-max) {
+      &, .slick&, .fat& {
+        background-color: #fff;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        position: relative;
+        top: 0;
+        width: auto;
+        
+        .modal-content {
+          border-radius: 0px;
+          height: auto;
+        }
       }
-      
-      .btn { width: 100%; }
     }
     
     .modal-content {
       .box-shadow(0 9px 90px rgba(0,0,0,1));
-    }
-  }
-  
-  .help {
-    .border-bottom-radius(@border-radius-small);
-    background-color: @gray-darker;
-    padding: 20px;
-    
-    h4 {
-      color: #fff;
-      margin: 0;
-      padding: 0 0 10px 0;
-    }
-    
-    a {
-      color: @gray;
+      border: none;
+ 
+      .modal-header {
+        border-bottom: none;
+      }
+      
+      .modal-body {
+        padding-top: 0;
+
+        // Forms in a Modal :)
+        form {
+          .form-group {
+            p { margin: 0; }
+          }
+        }
+        
+        .help {
+          left: 0;
+          position: absolute;
+          width: 100%;
+          
+          .border-bottom-radius(@border-radius-small);
+          background-color: @gray-darker;
+          padding: 20px;
+          
+          h4 {
+            color: #fff;
+            margin: 0;
+            padding: 0 0 10px 0;
+          }
+          
+          a {
+            color: @gray;
+          }
+          
+          @media (max-width: @screen-xs-max) {
+            border-radius: 0;
+          }
+        }
+        
+      }
+      
+      .modal-footer { display: none; }
+      
+      @media (max-width: @screen-xs-max) {
+        box-shadow: none;
+      }
     }
   }
 }
@@ -70,41 +109,53 @@
 
 /* LOGIN */
 
+// Login Page (use modal as form)
+.login {
+  #login_modal .modal-content {
+    box-shadow: none;
+  }
+  
+  .modal-backdrop {
+    display: none;
+  }
+}
+
+#username_help_modal {
+  p { margin: 0; }
+}
+
 #login_modal {
-  
+
   .modal-dialog {
-    margin-left: -150px;
-    width: 300px;
+    .modal-content {
+      height: 373px;
+    }
+  }
+  
+  #login_form {
+    margin-bottom: 20px;
     
-    @media (max-width: @screen-xs-max) {
-      margin: 0;
-      width: auto;
-    }
-  }
-  
-  
-  .form-group.username {
-    position: relative;
-    .icon-question-sign {
-      color: @gray;
-      position: absolute;
-      right: 10px;
-      text-decoration: none;
-      top: 3px;
+    .form-group {
+      position: relative;
       
-      &:hover, &:focus { color: @gray-lighter; }
+      .fa-question-circle {
+        color: @gray;
+        position: absolute;
+        right: 10px;
+        text-decoration: none;
+        top: 37px;
+        
+        &:hover, &:focus {
+          color: @gray-lighter;
+        }
+      }
     }
-  }
+  } 
 }
 
 /* REGISTRATION */
 
 #register_modal {
-  .modal-dialog {
-    margin-left: -300px;
-    width: 600px;
-  }
-  
   .form-group.terms {
     overflow: hidden;
     

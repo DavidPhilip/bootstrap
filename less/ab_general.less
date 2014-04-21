@@ -1,51 +1,53 @@
-body, html {
+html {
   background-color: @gray-darker;
-  //.img-retina("../../../img/general/black_denim.png"; "../../../img/general/black_denim@2x.png"; 200; 200);
-  height: 100%;
   
-  > div.ember-view { 
-    position: absolute;
-    top: 100px;
-    z-index: 9999;
-  }
-    
-  .header {
-    height: 95px;
-    margin-bottom: 70px;
-    
-    @media (max-width: @screen-xs-max) {
-      height: 50px;
-      margin-bottom: 20px;
-    }
-  }
+  *[data-ember-action] { cursor: pointer; }
   
-  > .container {
-    height: 100%;
-    position: relative;
-  }
-  
-  &.home #content { height: 100%; }
-  
-  #content {
-    background-color: #fff;
-    left: 0px;
+  &, body,
+  body > .ember-view {
+    height: auto;
     min-height: 100%;
-    padding: 200px 0 0;
     position: absolute;
-    top: 0px;
     width: 100%;
-    
-    @media (max-width: @grid-float-breakpoint-max) {
-      padding-top: 70px;      
-    }
   }
   
-  .row.line {
-    span {
-      background-color: @gray-lighter;
-      display: block;
-      height: 1px;
-      width: 100%;
+  body {
+    //.img-retina("../../../img/general/black_denim.png"; "../../../img/general/black_denim@2x.png"; 200; 200);
+    
+    .header {
+      height: 95px;
+      margin-bottom: 70px;
+      
+      @media (max-width: @screen-xs-max) {
+        height: 50px;
+        margin-bottom: 20px;
+      }
+    }
+    
+    > .container {
+      height: 100%;
+      position: relative;
+    }
+    
+    #content {
+      background-color: #fff;
+      height: auto;
+      left: 0px;
+      min-height: 100%;
+      padding: 200px 0 0;
+      
+      @media (max-width: @grid-float-breakpoint-max) {
+        padding-top: 70px;      
+      }
+    }
+    
+    .row.line {
+      span {
+        background-color: @gray-lighter;
+        display: block;
+        height: 1px;
+        width: 100%;
+      }
     }
   }
 }

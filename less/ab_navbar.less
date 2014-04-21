@@ -1,3 +1,52 @@
+.navbar {
+  background-color: transparent;
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 1;
+  
+  .navbar-header {
+    .navbar-brand {
+      .img-retina("../../../img/general/agilitybase_logo.png"; "../../../img/general/agilitybase_logo@2x.png"; 200px; 98px);
+      .text-hide();
+      height: 98px;
+      width: 200px;
+      
+      @media (max-width: @grid-float-breakpoint-max) {
+        background-size: 100px auto;
+        display: block;
+        float: none;
+        height: 49px;
+        margin: 0 auto 20px;
+        width: 100px;
+      }
+    }
+  
+    @media (min-width: @grid-float-breakpoint) and (max-width: @screen-sm-max) {
+      float: none;
+      margin: 0 auto;
+      width: 200px;
+    }
+  }
+  
+  @media (min-width: @grid-float-breakpoint) and (max-width: @screen-sm-max) {
+    margin: 0;
+    
+    .navbar-collapse {
+      text-align: center;
+      
+      .navbar-nav {
+        display: inline-block;
+        float: none !important;
+        margin: 30px auto 0;
+        width: auto;
+      }
+    }
+  }
+  
+  @media (max-width: @grid-float-breakpoint-max) {
+  }
+}
 
 .navbar {
   @media (min-width: @grid-float-breakpoint) {
@@ -256,12 +305,7 @@
         }
 
         .home_clubs&.mode-switch:hover {
-          background-color: lighten(@green-athletes, 5%)
-        }
-
-        .home_athletes&.mode-switch:hover,
-        .home&.mode-switch:hover {
-          background-color: lighten(@blue-clubs, 5%)
+          background-color: lighten(@brand-primary, 5%)
         }
       }
       
@@ -271,7 +315,7 @@
           &,
           &:hover,
           &:focus {
-            background-color: @green-athletes;
+            background-color: @brand-primary;
             color: @navbar-inverse-link-active-color;
           }
         }
@@ -280,22 +324,22 @@
           background-color: transparent;
           
           > a {
-            background-color: @green-athletes;
+            background-color: @brand-primary;
             color: @navbar-inverse-link-active-color;
             .opacity(.85);
             
             &:hover {
-              background-color: @green-athletes !important;
+              background-color: @brand-primary !important;
               .opacity(1);
             }
           }
           
-          &:nth-child(2) > a { background-color: darken(@green-athletes, 2%); }
-          &:nth-child(3) > a { background-color: darken(@green-athletes, 4%); }
-          &:nth-child(4) > a { background-color: darken(@green-athletes, 6%); }
-          &:nth-child(5) > a { background-color: darken(@green-athletes, 8%); }
-          &:nth-child(6) > a { background-color: darken(@green-athletes, 10%); }
-          &:nth-child(7) > a { background-color: darken(@green-athletes, 12%); }
+          &:nth-child(2) > a { background-color: darken(@brand-primary, 2%); }
+          &:nth-child(3) > a { background-color: darken(@brand-primary, 4%); }
+          &:nth-child(4) > a { background-color: darken(@brand-primary, 6%); }
+          &:nth-child(5) > a { background-color: darken(@brand-primary, 8%); }
+          &:nth-child(6) > a { background-color: darken(@brand-primary, 10%); }
+          &:nth-child(7) > a { background-color: darken(@brand-primary, 12%); }
         }
         
         @media (max-width: @grid-float-breakpoint-max) {

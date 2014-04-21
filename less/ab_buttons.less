@@ -1,7 +1,17 @@
 .btn-default {
-  &, .primary { .button-variant(@btn-primary-color; @blue-clubs; @blue-clubs); }
-  .second { .button-variant(@btn-primary-color; @green-athletes; @green-athletes); }
-  &.override, &.btn-override { .button-variant(@btn-primary-color; @gray-darker; @gray-darker); }
+  & { .button-variant(@gray-dark; @gray-dark; @gray-dark); }
+  
+  &.outlined {
+    .button-variant(@gray-dark; @gray-dark; @gray-dark; true);
+    &:active, &.active {
+      background-color: @btn-primary-bg;
+      border-color: @btn-primary-bg;
+      color: @btn-primary-color;
+    }
+  }
+  
+  &.primary { .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg); }
+  // &.override, &.btn-override { .button-variant(@gray-dark; @gray-dark; @gray-dark; true); }
 }
 
 .ab {
@@ -11,6 +21,10 @@
     &:hover,
     &:focus {
       .transition(~"color 0.15s, background-color 0.15s");
+    }
+    
+    span {
+      text-transform: capitalize;
     }
   }
 
