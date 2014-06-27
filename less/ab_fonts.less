@@ -285,10 +285,10 @@
  
 
 body {
-  font-family: "NiveauGroteskRegular", Helvetica, Arial, sans-serif;
+  font-family: @font-family-sans-serif;
 }
 
-.navbar a { font-family: "NiveauGroteskMedium", Helvetica, Arial, sans-serif; }
+.navbar a { font-family: @font-family-sans-serif; }
 
 h1,
 h2,
@@ -303,7 +303,7 @@ h6,
 .h5,
 .h6,
 #description p {
-  font-family: 'MuseoSlab-500', Helvetica, Arial, sans-serif;
+  font-family: @font-family-serif;
 }
 
 /* SIZES */
@@ -327,14 +327,25 @@ label, .navbar a { font-size: 16px; }
     .icon-stack { font-size: 75px; }
   }
   
-  h3 { color: @gray-light; }
-  
   p {
-    color: darken(@gray-light, 30%);
     font-size: @font-size-large;
   }
 }
 
 /* STYLES */
 
+a { color: @skylar; }
+a:hover { color: darken(@skylar, 10%); }
+
 .navbar a { text-transform: uppercase; }
+
+#description strong {
+  font-family: 'NiveauGroteskBold', @font-family-sans-serif;
+}
+
+#features {
+  .fa, h3, p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+

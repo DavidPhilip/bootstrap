@@ -28,7 +28,7 @@ body {
   }
   
   .login, .jumbodog {
-    background: url("../../../img/home/home_bg_3.png") no-repeat top center @gray-darker; 
+    background: url("../../../img/home/home_bg_5.jpg") no-repeat top center #ffffff; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,7 +40,9 @@ body {
     margin: 0;
     padding: 0px;
     
-    & > div {  height: 100%; }
+    & > div {
+      height: 100%;
+    }
      
     @media (max-width: @screen-xs-max) {
       -moz-background-size: auto 100%;
@@ -117,25 +119,28 @@ body {
   }
   
   #features {
-    background-color: @gray-darker;
+    background-color: @gray-dark;
     margin-bottom: 0;
-    padding: 20px 0 0 0;
+    padding: 30px 0 0 0;
     
-    .btn-group { margin: -1px 0 0 20px; }
+    .btn-group {
+      margin: 7px 0 0 0;
+    }
     
     h2 { color: @gray-light; }
     
     .features {
       margin: 30px auto 0 auto;
-      padding: 0 0 40px 0;
+      padding: 0;
       
       .main_goal {
-        background-color: #fff;
-        margin-bottom: 40px;
-        padding: 40px 0;
-        
-        p { color: @gray-dark; }
+        padding: 0 0 50px 0;
       }
+    }
+    
+    @media (min-width: @screen-md-min) {
+      .features.clubs .feature,
+      .features.athletes .feature { height: 370px; }
     }
     
     .carousel-inner > .item {
@@ -143,7 +148,13 @@ body {
     }
      
     .feature {
-      margin-top: 20px;
+      background-color: @brick;
+      padding-top: 50px;
+      
+      
+      &:last-child {
+        padding-bottom: 50px;
+      }
       
       &:nth-child(1n+4) {
         // margin-top: 50px;
@@ -176,7 +187,6 @@ body {
     &, h3, p { text-align: center; }
     
     h3 {
-      border-bottom: 1px solid lighten(@gray-darker, 5%);
       padding-bottom: 15px;
       margin: 10px 0 15px 0;
     }

@@ -1,9 +1,10 @@
 .btn-default {
-  & { .button-variant(@gray-dark; @gray-dark; @gray-dark); }
+  & { .button-variant(@gray-darker; @gray-darker; @gray-darker); }
   
   &.outlined {
-    .button-variant(@gray-dark; @gray-dark; @gray-dark; true);
-    &:active, &.active {
+    .button-variant(@gray-darker; @gray-darker; @gray-darker; true);
+    &.light { .button-variant(@gray-light; @gray-light; @gray-light; true); }
+    &.active, &.light.active {
       background-color: @btn-primary-bg;
       border-color: @btn-primary-bg;
       color: @btn-primary-color;
