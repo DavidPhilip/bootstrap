@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* CUSTOM FONTS */
 
 /* @license
@@ -282,7 +284,50 @@
   url('../../../fonts/286A61_0_0.woff') format('woff'),
   url('../../../fonts/286A61_0_0.ttf') format('truetype');
 }
- 
+
+// @font-face {
+//   font-family: "ab-icons";
+//   src:url("../../../fonts/ab-icons.eot");
+//   src:url("../../../fonts/ab-icons.eot?#iefix") format("embedded-opentype"),
+//     url("../../../fonts/ab-icons.svg#ab-icons") format("svg"),
+//     url("../../../fonts/ab-icons.woff") format("woff"),
+//     url("../../../fonts/ab-icons.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// [data-icon]:before {
+//   font-family: "ab-icons" !important;
+//   content: attr(data-icon);
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// [class^="icon-"]:before,
+// [class*=" icon-"]:before {
+//   font-family: "ab-icons" !important;
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-dog:before {
+//   content: "a";
+// }
+// .icon-guide-dog:before {
+//   content: "\e10b";
+// }
 
 body {
   font-family: @font-family-sans-serif;
@@ -308,23 +353,23 @@ h6,
 
 /* SIZES */
 
-label, .navbar a { font-size: 16px; }
+label, .navbar a { font-size: @font-size-base; }
 
 #description {
   h1, h2 {
-    font-size: 48px;
+    font-size: @font-size-hero;
   }
   
-  h2 .icon-stack i { font-size: 23px; }
+  h2 .icon-stack i { font-size: @font-size-h3; }
   
-  p { font-size: 24px; }
+  p { font-size: @font-size-h3; }
 }
 
 .learn-more { font-size: @font-size-large; }
 
 #features {
   .feature {
-    .icon-stack { font-size: 75px; }
+    .icon-stack { font-size: @font-size-featue-icons; }
   }
   
   p {
