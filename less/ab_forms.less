@@ -1,0 +1,78 @@
+
+form {
+  .form-group {
+    margin-bottom: @line-height-computed;
+    
+    &.last {
+      margin-bottom: 0px;
+    }
+    
+    &.has-error {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
+  
+  label {
+    font-weight: normal;
+  }
+  
+  .row {
+    margin-bottom: 40px;
+  }
+  
+  .form-control {
+    box-shadow: none;
+  }
+}
+
+// FloatLabel.js
+span.error.floatlabel {
+  .transition(all 0.5s ease-in-out);
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  
+  .has-error & {
+    color: @state-danger-text;
+    display: block;
+    opacity: 1;
+    top: 0px;
+  }
+  
+  i { margin-right: 5px; }
+}
+
+span.error.floatlabel,
+label.label-floatlabel {
+  left: 5px !important;
+  text-transform: uppercase;
+  font-size: @font-size-floatlabels !important;
+}
+
+label.label-floatlabel {
+  .has-error & {
+    display: none !important;
+    opacity: 0 !important;
+    top: 20px !important;
+  }
+}
+
+input.form-control.floatlabel {
+  height: 38px;
+  padding: 20px 0 5px 5px !important;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid @input-border;
+  box-shadow: none;
+  
+  .has-error & {
+    color: @state-danger-text;
+    border-color: @state-danger-text;
+    
+    &:focus { box-shadow: none; }
+  }
+}

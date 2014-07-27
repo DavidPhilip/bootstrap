@@ -1,0 +1,128 @@
+#dashboard {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+
+  #sidebar {
+    #gradient > .vertical(lighten(@gray-dark, 5%);@gray-dark;0%;100%);
+    background-color: @gray-dark;
+    bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    .navbar-toggle { color: @gray-light; }
+    
+    #avatar {
+      #gradient > .vertical(rgba(0,0,0,0);rgba(0,0,0,.7);0%;100%);
+      height: 265px;
+      padding: 23px 0 0 0;
+      text-align: center;
+      
+      .logo { margin: 0 auto; }
+      
+      #user-image {
+        margin: 29px 0 0 0;
+        
+        img {
+          .border-radius(100px);
+        }
+      }
+      
+      #user-slug {
+        color: @gray-light;
+        font-size: @font-size-large;
+        margin: 13px 0 0 0;
+      }
+    }
+    
+    .nav-sidebar {
+      padding: 20px 0;
+      border-top: 1px solid #5d5d5d; // TODO: Move color definition into ab_variables.less
+      
+      &:first-child {
+        border: none;
+        padding: 0;
+      }
+      
+      .headline {
+        padding: 0 20px;
+        text-transform: uppercase;
+        color: #9b9b9b; // TODO: Move color definition into ab_variables.less
+      }
+      
+      & > li {
+        &.first { margin: 20px 0 0 0; }
+        
+        & > a {
+          color: @gray-light;
+          text-transform: uppercase;
+          font-size: @font-size-medium;
+          padding: 12px 20px;
+          
+          i.fa { width: 30px; }
+        }
+        
+        &.active > a, & > a:hover, & > a:focus {
+          color: #fff;
+          background-color: @gray-darker;
+        } 
+      }
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    
+    overflow: hidden;
+    
+    .navbar-fixed-top {
+      margin-top: 50px;
+    }
+    
+    #sidebar {
+      width: 80%;
+      left: -80%;
+    }
+    
+    &.show-nav #main {
+      -webkit-transform: translateZ(0) translateX(80%);  
+      transform: translateZ(0) translateX(80%); 
+      
+      #content .backdrop {
+        opacity: .2;
+      } 
+    }
+
+    #main {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      
+      -webkit-transform: translateZ(0) translateX(0);
+      transform: translateZ(0) translateX(0);
+      
+      &, #content .backdrop {
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+      }
+      
+      #content, #content .row, #content .backdrop {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+      
+      #content .backdrop {
+        background-color: #000;
+        opacity: 0;
+      }
+    }
+    
+  }
+  
+}

@@ -1,0 +1,199 @@
+body {
+  
+  .home, .login, .register {
+    background: none #fff;
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    
+    #content {
+      height: 100%;
+      padding: 0;
+      position: relative;
+      top: -128px;
+      
+      @media (max-width: @screen-sm-max) {
+        top: -214px;
+      }
+      
+      @media (max-width: @screen-xs-max) {
+        top: -99px;
+      }
+    }
+    
+    #navigation {
+      margin: 30px 0 0 0;
+    }
+  }
+  
+  .login, .register, .jumbodog {
+    background: url("../../../img/home/home_bg_5.jpg") no-repeat top center #ffffff; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .jumbodog {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+    
+    & > div {
+      height: 100%;
+    }
+     
+    @media (max-width: @screen-xs-max) {
+      -moz-background-size: auto 100%;
+      -webkit-background-size: auto 100%;
+      background-size: auto 100%;
+    }
+  }
+  
+  .learn-more {
+    bottom: 0;
+    color: @gray-darker;
+    display: block;
+    height: 80px;
+    left: 0;
+    padding-top: 18px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    
+    span { display: block; }
+    span, i { line-height: 1em; }
+  }
+  
+  #description {
+    .translate(0, -50%);
+    height: auto;
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    
+    @media (max-width: @screen-sm-max) {
+      left: 0;
+      margin-top: 65px;
+      text-align: center;
+      width: 100%;
+    }
+    
+    h1 {
+      line-height: 58px;
+      margin: 0 0 25px 0;
+      @media (max-width: @screen-xs-max) {
+        font-size: 30px;
+        line-height: 35px;        
+      }
+    }
+    
+    @media (max-width: @screen-xs-max) {
+      left: 5%;
+      margin: 0;
+      width: 90%;
+      
+      a.btn.btn-register, a.btn.btn-default {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+    }
+    
+    a.btn {
+      position: relative;
+      width: 300px;
+      
+      
+      @media (min-width: @screen-sm-min) {
+        &.btn-register { margin-right: 10px; }
+      }
+      
+      i {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+  }
+  
+  #features {
+    background-color: @gray-dark;
+    margin-bottom: 0;
+    padding: 30px 0 0 0;
+    
+    .btn-group {
+      margin: 7px 0 0 0;
+    }
+    
+    h2 { color: @gray-light; }
+    
+    .features {
+      margin: 30px auto 0 auto;
+      padding: 0;
+      
+      .main_goal {
+        padding: 0 0 50px 0;
+      }
+    }
+    
+    @media (min-width: @screen-md-min) {
+      .features.clubs .feature,
+      .features.athletes .feature { height: 370px; }
+    }
+    
+    .carousel-inner > .item {
+      .transition(0.3s ease-in-out left);
+    }
+     
+    .feature {
+      background-color: @brick;
+      padding-top: 50px;
+      
+      
+      &:last-child {
+        padding-bottom: 50px;
+      }
+      
+      &:nth-child(1n+4) {
+        // margin-top: 50px;
+      }
+    //   .fa-stack {
+    //     font-size: 3em;
+        
+    //     i:first-child { color: @gray-darker; }
+    //     i:last-child {
+    //       color: #333;
+    //       font-size: 0.8em;
+    //     }
+
+    //     i.fa-thumbs-up {
+    //       top: -4px;
+    //       left: 2px;
+    //     }
+
+    //     i.fa-bell {
+    //       top: -3px;
+    //       left: 1px;
+    //     }
+
+    //     i.fa-plane { top: 2px; }
+    //     i.fa-envelope { top: -3px; }
+    //     i.fa-exchange { top: -2px; }
+    //   }
+    }   
+
+    &, h3, p { text-align: center; }
+    
+    h3 {
+      padding-bottom: 15px;
+      margin: 10px 0 15px 0;
+    }
+    
+    p {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+}

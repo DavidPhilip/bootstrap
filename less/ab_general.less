@@ -1,0 +1,53 @@
+html {
+  background-color: @gray-darker;
+  
+  a[data-ember-action] { cursor: pointer; }
+  
+  &, body,
+  body > .ember-view {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.logo {
+  &.medium {
+    .img-retina("../../../img/general/agilitybase_logo_medium_white.png"; "../../../img/general/agilitybase_logo_medium_white@2x.png"; 94px; 44px);
+    .text-hide();
+    height: 44px;
+    width: 94px;
+  }
+}
+
+.icon-spin {
+  margin: 0 10px 0 0;
+  opacity: 1;
+}
+
+noscript {
+  .opacity(0.95);
+  
+  background-color: @gray-darker;
+  color: @gray-lighter;
+  display: table;
+  font-size: 2em;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+
+  p {
+    .opacity(1);
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+/* OLDIE HANDLING */
+
+.oldie {
+  label { display: inline-block; }
+}

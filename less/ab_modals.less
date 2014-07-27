@@ -1,0 +1,184 @@
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.ab.modal {
+  outline: none;
+  
+  h3 { 
+    text-align: center;
+    color: @gray-darker;
+  }
+  
+  .modal-dialog {
+    .translate(-50%, -50%);
+    
+    left: 50%;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    
+    .slick& {
+      width: 300px;
+    }
+    
+    .fat& {
+      width: 600px;
+    }
+    
+    @media (max-width: @screen-xs-max) {
+      &, .slick&, .fat& {
+        background-color: #fff;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        position: relative;
+        top: 0;
+        transform: none;
+        width: auto;
+        
+        .modal-content {
+          border-radius: 0px;
+          height: auto;
+        }
+      }
+    }
+    
+    .modal-content {
+      .box-shadow(0 9px 90px rgba(0,0,0,1));
+      border: none;
+ 
+      .modal-header {
+        border-bottom: none;
+      }
+      
+      .modal-body {
+        padding-top: 0;
+
+        // Forms in a Modal :)
+        form {
+          .form-group {
+            p { margin: 0; }
+          }
+
+          button.submit {
+            margin-top: @modal-inner-padding;
+          }
+        }
+        
+        .help {
+          .border-bottom-radius(@border-radius-small);
+          background-color: #fff;
+          padding: @modal-inner-padding;
+          margin: 0 (-1*@modal-inner-padding) (-1*@modal-inner-padding);
+          
+          h4 {
+            border-top: 1px solid @gray-light;
+            color: @gray-darker;
+            margin: 0 (-1*@modal-inner-padding);
+            padding: 0 0 10px 0;
+            
+            span {
+              display: block;
+              padding: 30px 30px 0;
+            }
+          }
+          
+          a {
+            color: @gray-dark;
+          }
+          
+          @media (max-width: @screen-xs-max) {
+            border-radius: 0;
+          }
+        }
+        
+      }
+      
+      .modal-footer { display: none; }
+      
+      @media (max-width: @screen-xs-max) {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.ab .modal-backdrop {
+  &.in { .opacity(.7); }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  .modal-content {
+    .box-shadow(0 9px 90px rgba(0,0,0,1));
+  }
+}
+
+/* LOGIN */
+
+// Login & Register Page (use modal as form)
+.login, .register {
+  #login_modal,
+  #register_modal {
+    .modal-content {
+      box-shadow: none;
+    }
+  }
+  
+  .modal-backdrop {
+    display: none;
+  }
+}
+
+#username_help_modal {
+  p { margin: 0; }
+}
+
+#login_modal {
+
+  .modal-dialog {
+    .modal-content {
+      // height: 373px;
+    }
+  }
+  
+  #login_form {
+    .form-group {
+      position: relative;
+      
+      .fa-question-circle {
+        color: @gray;
+        position: absolute;
+        right: 5px;
+        text-decoration: none;
+        bottom: 5px;
+        z-index: 1;
+        
+        &:hover, &:focus {
+          color: @brick;
+        }
+      }
+    }
+  } 
+}
+
+/* REGISTRATION */
+
+#register_modal {
+  .form-group.terms {
+    overflow: hidden;
+    
+    input {
+      display: block;
+      float: left;
+    }
+    
+    label {
+      display: inline-block;
+      width: 90%;
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
