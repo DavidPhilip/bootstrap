@@ -1,10 +1,13 @@
 
+body.no-overflow { overflow: hidden; }
+
 .modal-backdrop {
-  z-index: 1040;
+  z-index: 0;
 }
 
 .ab.modal {
   outline: none;
+  overflow: auto;
   
   h3 { 
     text-align: center;
@@ -18,6 +21,7 @@
     margin: 0px;
     position: absolute;
     top: 50%;
+    z-index: 1;
     
     .slick& {
       width: 300px;
@@ -147,8 +151,8 @@
     .form-group {
       position: relative;
       
-      .fa-question-circle {
-        color: @gray;
+      .fa-question {
+        color: @gray-light;
         position: absolute;
         right: 5px;
         text-decoration: none;
@@ -156,7 +160,7 @@
         z-index: 1;
         
         &:hover, &:focus {
-          color: @brick;
+          color: @brand-primary;
         }
       }
     }
@@ -172,6 +176,7 @@
     input {
       display: block;
       float: left;
+      width: auto;
     }
     
     label {
