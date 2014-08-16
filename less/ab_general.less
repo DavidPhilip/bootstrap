@@ -4,12 +4,23 @@ html {
   a[data-ember-action] { cursor: pointer; }
   
   &, body,
-  body > .ember-view {
+  body > .ember-view,
+  .dashboard, .home {
     height: 100%;
     min-height: 100%;
     position: relative;
     width: 100%;
   }
+}
+
+#loading {
+  .vertical-center;
+  display: block;
+  font-size: 40px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  width: 40px;
 }
 
 .logo {
@@ -43,6 +54,18 @@ noscript {
     .opacity(1);
     display: table-cell;
     vertical-align: middle;
+  }
+}
+
+.notifications {
+  .vertical-center;
+  text-align: center;
+  width: 20% !important;
+  margin-top: 0 !important;
+  
+  .notification {
+    background-color: fade(@state-success-bg, 70%);
+    padding: 20px 10px;
   }
 }
 

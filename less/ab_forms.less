@@ -32,6 +32,102 @@ form {
     }
   }
   
+  #dropzone {
+    border: 2px dashed @gray-light;
+    border-radius: 25px;
+    height: 200px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    width: 100%;
+    
+    .dropit {
+      .vertical-center;
+      color: @gray-light;
+      
+      .fa-stack {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  #avatar-upload {
+    p {
+      text-align: center;
+    }
+    
+    #preview {
+      margin: 0 auto;
+      position: relative;
+      width: 50%;
+      
+      a {
+        .transition(~"background-color 0.3s, opacity 0.3s");
+        background-color: fade(@gray-dark, 0%);
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        text-align: center;
+        text-decoration: none;
+        right: 0;
+        
+        &:hover {
+          background-color: fade(@gray-dark, 90%);
+          opacity: 1;
+        }
+        
+        span.btn {
+          .vertical-center;
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+      
+      img { width: 100%; }
+    }
+    
+    .upload-button-wrapper {
+      position: relative;
+      
+      button {
+        display: block;
+        margin: 0 auto;
+        
+        .upload-label {
+          i.fa {
+            margin-right: 10px;
+          }
+        }
+      }
+      
+      input {
+        &.upload {
+          cursor: pointer;
+          font-size: 20px;
+          height: 0;
+          margin: 0;
+          padding: 0;
+          right: 0;
+          top: 0;
+          width: 0;
+          
+          opacity: 0;
+          filter: alpha(opacity=0);
+          -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        }
+      }
+    }
+  }
+  
+  h3 {
+    color: @skylar;
+    text-transform: uppercase;
+    
+    &.sub {
+      color: @gray-mid;
+      text-transform: none;
+    }
+  }
   
   label {
     font-weight: normal;
@@ -95,4 +191,28 @@ input.form-control.floatlabel {
     
     &:focus { box-shadow: none; }
   }
+}
+
+// Dashboard Specifics
+
+#dashboard {
+  form {
+    margin: 40px;
+    
+    .row {
+      margin-bottom: 0;
+    }
+    
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+    
+    button.submit { margin-top: 20px; }
+  }
+}
+
+// User Edit
+
+form#edit {
+  
 }

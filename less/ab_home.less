@@ -1,6 +1,6 @@
 body {
   
-  .home, .login, .register {
+  .home, .login, .signup {
     background: none #fff;
     height: 100%;
     min-height: 100%;
@@ -27,7 +27,7 @@ body {
     }
   }
   
-  .login, .register, .jumbodog {
+  .login, .signup, .jumbodog {
     background: url("../../../img/home/home_bg_5.jpg") no-repeat top center #ffffff; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -95,7 +95,7 @@ body {
       margin: 0;
       width: 90%;
       
-      a.btn.btn-register, a.btn.btn-default {
+      a.btn.btn-signup, a.btn.btn-default {
         margin: 0 0 10px 0;
         width: 100%;
       }
@@ -107,7 +107,7 @@ body {
       
       
       @media (min-width: @screen-sm-min) {
-        &.btn-register { margin-right: 10px; }
+        &.btn-signup { margin-right: 10px; }
       }
       
       i {
@@ -138,52 +138,15 @@ body {
       }
     }
     
-    @media (min-width: @screen-md-min) {
-      .features.clubs .feature,
-      .features.athletes .feature { height: 370px; }
-    }
+    // @media (min-width: @screen-md-min) {
+    //   .features.clubs .feature,
+    //   .features.athletes .feature { height: 370px; }
+    // }
     
     .carousel-inner > .item {
       .transition(0.3s ease-in-out left);
     }
-     
-    .feature {
-      background-color: @brick;
-      padding-top: 50px;
-      
-      
-      &:last-child {
-        padding-bottom: 50px;
-      }
-      
-      &:nth-child(1n+4) {
-        // margin-top: 50px;
-      }
-    //   .fa-stack {
-    //     font-size: 3em;
-        
-    //     i:first-child { color: @gray-darker; }
-    //     i:last-child {
-    //       color: #333;
-    //       font-size: 0.8em;
-    //     }
-
-    //     i.fa-thumbs-up {
-    //       top: -4px;
-    //       left: 2px;
-    //     }
-
-    //     i.fa-bell {
-    //       top: -3px;
-    //       left: 1px;
-    //     }
-
-    //     i.fa-plane { top: 2px; }
-    //     i.fa-envelope { top: -3px; }
-    //     i.fa-exchange { top: -2px; }
-    //   }
-    }   
-
+    
     &, h3, p { text-align: center; }
     
     h3 {
@@ -195,5 +158,52 @@ body {
       margin: 0 auto;
       width: 80%;
     }
+    
+    .feature-wrapper {
+      display: table;
+      background-color: @gray-darker;
+
+      .feature {
+        display: table-cell;
+        padding: 50px;
+        
+        &:nth-child(1n+4) {
+          // margin-top: 50px;
+        }
+      //   .fa-stack {
+      //     font-size: 3em;
+          
+      //     i:first-child { color: @gray-darker; }
+      //     i:last-child {
+      //       color: #333;
+      //       font-size: 0.8em;
+      //     }
+
+      //     i.fa-thumbs-up {
+      //       top: -4px;
+      //       left: 2px;
+      //     }
+
+      //     i.fa-bell {
+      //       top: -3px;
+      //       left: 1px;
+      //     }
+
+      //     i.fa-plane { top: 2px; }
+      //     i.fa-envelope { top: -3px; }
+      //     i.fa-exchange { top: -2px; }
+      //   }
+      }   
+    }
+  }
+  
+  #registernow {
+    margin: 0;
+    text-align: center;
+    background-color: @skylar;
+    color: #fff;
+    
+    h2 { margin: 0 0 20px 0; }
+    a { margin: 0; border-color: #fff; }
   }
 }

@@ -30,18 +30,19 @@
   }
 
   .btn-vlg {
-    .button-size(@padding-verylarge-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small; @padding-verylarge-vertical; @padding-large-horizontal; (@padding-verylarge-vertical - 4); @padding-large-horizontal);
+    .button-size(@padding-verylarge-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-round; @padding-verylarge-vertical; @padding-large-horizontal; (@padding-verylarge-vertical - 4); @padding-large-horizontal);
   }
 
   .btn-lg {
     // line-height: ensure even-numbered height of button next to large input
-    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small; @padding-large-vertical; @padding-large-horizontal; (@padding-large-vertical - 4); @padding-large-horizontal);
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-round; @padding-large-vertical; @padding-large-horizontal; (@padding-large-vertical - 4); @padding-large-horizontal);
   }
   
   .btn-sm,
   .btn-xs {
     // line-height: ensure proper height of button next to small input
-    .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+    .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-base; @line-height-small; @border-radius-round);
+    text-transform: uppercase;
   }
   
   .btn-xs {
