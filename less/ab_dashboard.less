@@ -16,7 +16,12 @@
     overflow-x: hidden;
     overflow-y: auto;
     
-    .navbar-toggle { color: @gray-light; }
+    .navbar-toggle {
+      color: #fff;
+      position: absolute;
+      right: 0;
+      z-index: 4;
+    }
     
     #avatar {
       height: 265px;
@@ -34,12 +39,14 @@
         width: 100%;
       }
       
-      img.blurry {
+      .blurry {
+        background-position: center center;
+        background-size: cover;
         display: block;
-        width: 100%;
-        left: 0;
+        height: 100%;
         position: absolute;
         top: 0;
+        width: 100%;
       }
       
       .wrapper {
@@ -104,6 +111,8 @@
   }
   
   #content {
+    background-color: #fff;
+    
     .headline {
       padding: 20px 40px;
       border-bottom: 1px solid @gray-light;
@@ -120,10 +129,35 @@
   
   @media screen and (max-width: 767px) {
     
-    overflow: hidden;
+    #main, .navbar-fixed-top {
+      -webkit-transition: .3s ease all;
+      transition: .3s ease all;
+    }
+    
+    .backdrop {
+      -webkit-transition: .5s ease opacity, 0.3s ease left;
+      transition: .5s ease opacity, 0.3s ease left;
+    }
+    
+    .backdrop {
+      background-color: #000;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      width: 100%;
+      z-index: 999;
+    }
     
     .navbar-fixed-top {
-      margin-top: 50px;
+      background-color: fade(#fff, 90%);
+      border-bottom: 1px solid @gray-light;
+      padding: 10px 0;
+            
+      a.navbar-brand {
+        margin: 0 auto;
+      }
     }
     
     #sidebar {
@@ -131,38 +165,50 @@
       left: -80%;
     }
     
-    &.show-nav #main {
-      -webkit-transform: translateZ(0) translateX(80%);  
-      transform: translateZ(0) translateX(80%); 
+    &.show-nav {
+      & {
+        overflow: hidden;
+      }
       
-      #content .backdrop {
+      .backdrop {
+        left: 80%;
         opacity: .2;
-        z-index: 999;
-      } 
+        visibility: visible;
+      }
+      
+      .navbar-fixed-top {
+        left: 80%;
+        right: -80%;
+      }
+    
+      #main {
+        -webkit-transform: translateZ(0) translateX(80%);  
+        transform: translateZ(0) translateX(80%); 
+      }
     }
 
     #main {
       width: 100%;
       height: 100%;
+      padding-top: 70px;
       position: relative;
       
       -webkit-transform: translateZ(0) translateX(0);
       transform: translateZ(0) translateX(0);
       
-      &, #content .backdrop {
-        -webkit-transition: .3s ease all;
-        transition: .3s ease all;
-      }
-      
-      #content, #content .row, #content .backdrop {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-      }
-      
-      #content .backdrop {
-        background-color: #000;
-        opacity: 0;
+      #content {
+        .headline {
+          padding: 20px 40px;
+          border-bottom: 1px solid @gray-light;
+          
+          h1 { margin: 0; }
+          span {
+            color: @gray-light;
+            display: block;
+            font-size: @font-size-medium;
+            margin: 7px 0 0 0;
+          }
+        }
       }
     }
     
