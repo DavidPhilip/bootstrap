@@ -1,9 +1,9 @@
 .btn-default {
-  & { .button-variant(@gray-darker; @gray-darker; @gray-darker); }
+  & { .button-variant(#fff; @gray-dark; @gray-dark); }
   
   &.outlined {
-    .button-variant(@gray-darker; @gray-darker; @gray-darker; true);
-    &.light { .button-variant(@gray-light; @gray-light; @gray-light; true); }
+    .button-variant-outlined(@gray-dark; @gray-dark; @gray-dark);
+    &.light { .button-variant-outlined(@gray-light; @gray-light; @gray-light); }
     &.active, &.light.active {
       background-color: @btn-primary-bg;
       border-color: @btn-primary-bg;
@@ -21,11 +21,11 @@
     &,
     &:hover,
     &:focus {
-      .transition(~"color 0.15s, background-color 0.15s");
+      .transition(~"color 0.15s, background-color 0.15s, border-color 0.15s");
     }
     
     span {
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
   }
 

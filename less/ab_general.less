@@ -78,6 +78,20 @@ noscript {
   }
 }
 
+img {
+  &.circular {
+    .border-radius(100px);
+    display: block;
+    height: 100px;
+    width: 100px;
+    
+    &.small {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
 /* OLDIE HANDLING */
 
 .oldie {
