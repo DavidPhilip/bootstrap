@@ -32,6 +32,20 @@ form {
     }
   }
   
+  .radio-group {
+    overflow: hidden;
+    padding-left: 5px;
+    
+    .group-label { display: block; }
+    
+    .radio-inline {
+      margin: 1px 0 0 0;
+      &.col-xs-12 {
+        margin-top: 10px;
+      }
+    }
+  }
+  
   #dropzone {
     border: 2px dashed @gray-light;
     border-radius: 25px;
@@ -163,7 +177,9 @@ span.error.floatlabel {
 }
 
 span.error.floatlabel,
-label.label-floatlabel {
+label.label-floatlabel,
+.group-label {
+  color: @gray-mid !important;
   font-size: @font-size-floatlabels !important;
   font-weight: normal !important;
   left: 5px !important;
