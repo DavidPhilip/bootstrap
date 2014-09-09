@@ -31,12 +31,12 @@
   }
 
   .btn-vlg {
-    .button-size(@padding-verylarge-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-round; @padding-verylarge-vertical; @padding-large-horizontal; @padding-verylarge-vertical; @padding-large-horizontal);
+    .button-size(@padding-verylarge-vertical; @padding-verylarge-horizontal; @font-size-large; @line-height-large; @border-radius-round);
   }
 
   .btn-lg {
     // line-height: ensure even-numbered height of button next to large input
-    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-round; @padding-large-vertical; @padding-large-horizontal; @padding-large-vertical; @padding-large-horizontal);
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-round);
   }
   
   .btn-sm,
@@ -47,7 +47,7 @@
   }
   
   .btn-xs {
-    padding: 1px 5px;
+    padding: @padding-xs-horizontal @padding-xs-vertical;
   }
 
 }

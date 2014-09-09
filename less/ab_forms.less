@@ -1,5 +1,11 @@
 
 form {
+  &.actionable {
+    padding-bottom: 100px;
+  }
+  
+  select:hover { cursor: pointer; }
+  
   .alert-danger {
     background-color: transparent;
     margin-bottom: 30px;
@@ -17,6 +23,17 @@ form {
     }
   }
   
+  .actionbar-bottom {
+    background-color: fade(#fff, 90%);
+    border-top: 1px solid @gray-light;
+    min-height: 0;
+    padding: 0;
+    
+    button, .button-group {
+      margin: 20px auto;
+    }
+  }
+  
   .form-group {
     margin-bottom: @line-height-computed;
     
@@ -30,13 +47,26 @@ form {
       border: none;
       box-shadow: none;
     }
+    
+    .group-label {
+      display: block;
+      padding-left: 5px;
+    }
+    
+    &.select {
+      .group-label {
+        margin-bottom: 3px;
+      }
+    }
   }
   
   .radio-group {
     overflow: hidden;
     padding-left: 5px;
     
-    .group-label { display: block; }
+    .group-label {
+      padding-left: 0px;
+    }
     
     .radio-inline {
       margin: 1px 0 0 0;
@@ -153,7 +183,7 @@ form {
   }
   
   .form-control {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 }
 
@@ -167,7 +197,7 @@ span.error.floatlabel {
   z-index: 1;
   
   .has-error & {
-    color: @state-danger-text;
+    color: @state-danger-text !important;
     display: block;
     opacity: 1;
     top: 15px;
@@ -202,6 +232,10 @@ input.form-control.floatlabel {
   border-bottom: 1px solid @input-border;
   box-shadow: none;
   
+  &:focus {
+    border-bottom: 1px solid @gray-darker;
+  }
+
   .has-error & {
     color: @state-danger-text;
     border-color: @state-danger-text;
@@ -221,13 +255,5 @@ input.form-control.floatlabel {
     h3 {
       margin: 20px 0 20px 0;
     }
-    
-    button.submit { margin-top: 20px; }
   }
-}
-
-// User Edit
-
-form#edit {
-  
 }

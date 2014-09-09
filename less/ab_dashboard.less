@@ -194,8 +194,9 @@
       padding-top: 70px;
       position: relative;
       
-      -webkit-transform: translateZ(0) translateX(0);
-      transform: translateZ(0) translateX(0);
+      // Known Bug / Issue in Chrome: If we use this it breaks "fixed" child elements
+      //-webkit-transform: translateZ(0) translateX(0);
+      //transform: translateZ(0) translateX(0);
       
       #content {
         .headline {
