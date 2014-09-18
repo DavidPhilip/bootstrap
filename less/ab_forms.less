@@ -1,37 +1,9 @@
 
 form {
+  
+  // General
   &.actionable {
     padding-bottom: 100px;
-  }
-  
-  select:hover { cursor: pointer; }
-  
-  .alert-danger {
-    background-color: transparent;
-    margin-bottom: 30px;
-    
-    ul {
-      list-style: none;
-      padding: 0;
-      
-      li {
-        margin-bottom: 15px;
-        i {
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-  
-  .actionbar-bottom {
-    background-color: fade(#fff, 90%);
-    border-top: 1px solid @gray-light;
-    min-height: 0;
-    padding: 0;
-    
-    button, .button-group {
-      margin: 20px auto;
-    }
   }
   
   .form-group {
@@ -60,6 +32,52 @@ form {
     }
   }
   
+  // Select
+  select:hover { cursor: pointer; }
+  
+  // Buttons
+  button.pull-right { margin-left: 10px; }
+  button.pull-left { margin-right: 10px; }
+  
+  // Action Response
+  .alert-danger {
+    background-color: transparent;
+    margin-bottom: 30px;
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 15px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+  // Action Items 
+  .actionbar-bottom {
+    background-color: fade(#fff, 90%);
+    border-top: 1px solid @gray-light;
+    min-height: 0;
+    padding: 0;
+    
+    button, .button-group {
+      margin: 20px auto;
+    }
+  }
+  
+  .actionlist-item {
+    .text { margin-top: 10px; }
+  }
+  
+  .action-headline {
+    .buttons { padding: 6px 0 0 10px; }
+  }
+  
+  // Radios
   .radio-group {
     overflow: hidden;
     padding-left: 5px;
@@ -76,6 +94,7 @@ form {
     }
   }
   
+  // Picture Upload
   #dropzone {
     border: 2px dashed @gray-light;
     border-radius: 25px;
@@ -164,6 +183,7 @@ form {
     }
   }
   
+  // Fonts & Colors
   h3 {
     color: @brand-primary;
     text-transform: uppercase;
@@ -245,7 +265,6 @@ input.form-control.floatlabel {
 }
 
 // Dashboard Specifics
-
 #dashboard {
   form {
     .row {
