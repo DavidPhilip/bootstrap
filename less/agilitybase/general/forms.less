@@ -1,0 +1,95 @@
+
+form {
+  
+  // General
+  &.actionable {
+    padding-bottom: 100px;
+  }
+  
+  h3 {
+    margin: 20px 0 20px 0;
+  }
+  
+  .form-group {
+    margin-bottom: @line-height-computed;
+    
+    > div { position: relative; }
+    
+    &.last {
+      margin-bottom: 0px;
+    }
+    
+    &.has-error {
+      border: none;
+      box-shadow: none;
+    }
+    
+    .group-label {
+      display: block;
+      padding-left: 5px;
+    }
+    
+    &.select {
+      .group-label {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  
+  // Select
+  select:hover { cursor: pointer; }
+  
+  // Buttons
+  button.pull-right { margin-left: 10px; }
+  button.pull-left { margin-right: 10px; }
+  
+  // Action Response
+  .alert-danger {
+    background-color: transparent;
+    margin-bottom: 30px;
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 15px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+  // Radios
+  .radio-group {
+    overflow: hidden;
+    padding-left: 5px;
+    
+    .group-label {
+      padding-left: 0px;
+    }
+    
+    .radio-inline {
+      margin: 1px 0 0 0;
+      &.col-xs-12 {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  label {
+    font-weight: normal;
+  }
+  
+  .row {
+    margin-bottom: 40px;
+  }
+  
+  .form-control {
+    box-shadow: none !important;
+  }
+}
+
+
+

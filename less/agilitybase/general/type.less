@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* CUSTOM FONTS */
+/*@import url("//hello.myfonts.net/count/286a5f");*/
+  
+@font-face {font-family: 'MuseoSlab-500';src: url('../../../fonts/2BDDD2_0_0.eot');src: url('../../../fonts/2BDDD2_0_0.eot?#iefix') format('embedded-opentype'),url('../../../fonts/2BDDD2_0_0.woff') format('woff'),url('../../../fonts/2BDDD2_0_0.ttf') format('truetype'),url('../../../fonts/2BDDD2_0_0.svg#wf') format('svg');}
+@font-face {font-family: 'NiveauGroteskLight';src: url('../../../fonts/2BDDD2_1_0.eot');src: url('../../../fonts/2BDDD2_1_0.eot?#iefix') format('embedded-opentype'),url('../../../fonts/2BDDD2_1_0.woff') format('woff'),url('../../../fonts/2BDDD2_1_0.ttf') format('truetype'),url('../../../fonts/2BDDD2_1_0.svg#wf') format('svg');}
+@font-face {font-family: 'NiveauGroteskExtraLight';src: url('../../../fonts/2BDDD2_2_0.eot');src: url('../../../fonts/2BDDD2_2_0.eot?#iefix') format('embedded-opentype'),url('../../../fonts/2BDDD2_2_0.woff') format('woff'),url('../../../fonts/2BDDD2_2_0.ttf') format('truetype'),url('../../../fonts/2BDDD2_2_0.svg#wf') format('svg');}
+@font-face {font-family: 'NiveauGroteskBold';src: url('../../../fonts/2BDDD2_3_0.eot');src: url('../../../fonts/2BDDD2_3_0.eot?#iefix') format('embedded-opentype'),url('../../../fonts/2BDDD2_3_0.woff') format('woff'),url('../../../fonts/2BDDD2_3_0.ttf') format('truetype'),url('../../../fonts/2BDDD2_3_0.svg#wf') format('svg');}
+@font-face {font-family: 'NiveauGroteskRegular';src: url('../../../fonts/2BDDD2_4_0.eot');src: url('../../../fonts/2BDDD2_4_0.eot?#iefix') format('embedded-opentype'),url('../../../fonts/2BDDD2_4_0.woff') format('woff'),url('../../../fonts/2BDDD2_4_0.ttf') format('truetype'),url('../../../fonts/2BDDD2_4_0.svg#wf') format('svg');}
+
+// @font-face {
+//   font-family: "ab-icons";
+//   src:url("../../../fonts/ab-icons.eot");
+//   src:url("../../../fonts/ab-icons.eot?#iefix") format("embedded-opentype"),
+//     url("../../../fonts/ab-icons.svg#ab-icons") format("svg"),
+//     url("../../../fonts/ab-icons.woff") format("woff"),
+//     url("../../../fonts/ab-icons.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// [data-icon]:before {
+//   font-family: "ab-icons" !important;
+//   content: attr(data-icon);
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// [class^="icon-"]:before,
+// [class*=" icon-"]:before {
+//   font-family: "ab-icons" !important;
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-dog:before {
+//   content: "a";
+// }
+// .icon-guide-dog:before {
+//   content: "\e10b";
+// }
+
+body {
+  font-family: @font-family-sans-serif;
+}
+
+.navbar a { font-family: @font-family-sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+#description p {
+  font-family: @font-family-serif;
+  
+  .btn {
+    font-family: @font-family-sans-serif;
+  }
+}
+
+h3, h4 {
+  font-family: @font-family-sans-serif;
+}
+
+/* SIZES */
+
+label, .navbar a { font-size: @font-size-base; }
+
+#description {
+  h1, h2 {
+    font-size: @font-size-hero;
+  }
+  
+  h2 .icon-stack i { font-size: @font-size-h3; }
+  
+  p { font-size: @font-size-h3; }
+}
+
+.learn-more { font-size: @font-size-large; }
+
+#features {
+  .feature {
+    .icon-stack { font-size: @font-size-feature-icons; }
+  }
+  
+  p {
+    font-size: @font-size-large;
+  }
+}
+
+p { margin: 0 0 @line-height-computed; }
+
+h3, h4 {
+  font-size: @font-size-medium;
+}
+
+/* STYLES */
+
+a { color: @skylar; }
+a:hover { color: darken(@skylar, 10%); }
+
+.navbar a { text-transform: uppercase; }
+
+#description strong {
+  font-family: 'NiveauGroteskBold', @font-family-sans-serif;
+}
+
+#features {
+  .fa, h3, p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.light { color: @gray-light; }
+.medium { color: @gray-mid; }
+.dark { color: @gray-dark; }
+
+h3 {
+  color: @brand-primary;
+  text-transform: uppercase;
+  
+  &.sub {
+    color: @gray-mid;
+    text-transform: none;
+  }
+}
+
+.select2-choice.select2-default {
+  color: @input-color !important;
+}

@@ -1,0 +1,64 @@
+// Action Items
+.actionbar {
+  a + .btn,
+  .btn + a,
+  a + a,
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}
+
+.actionbar-bottom {
+  background-color: fade(#fff, 90%);
+  border-top: 1px solid @gray-light;
+  min-height: 0;
+  padding: 0;
+  
+  button, .button-group {
+    margin: 20px auto;
+  }
+  
+  button.pull-right {
+    margin-right: 40px;
+    & + button { margin-right: 20px; }
+  }
+}
+
+.actionlist-item {
+  .text { margin-top: 10px; }
+}
+
+.action-headline {
+  .buttons { padding: 6px 0 0 10px; }
+}
+
+.actionbar--block {
+  border-bottom: 1px solid @gray-light;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.actionbar--wrapper,
+.actionbar--wrapper.holds-cards {
+  border-bottom: 1px solid @gray-light;
+  padding: 40px;
+  @media screen and (max-width: 767px) { padding: 40px 20px; }
+  
+  h3 { margin-top: 0; }
+  .list-group { margin-bottom: 0; }
+}
+
+.content .actionbar--wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.actionbar--wrapper.holds-cards,
+.actionbar--wrapper.last,
+.actionbar--wrapper:last-of-type {
+  border-bottom: none;
+}
+
+.actionbar--wrapper div.row:last-of-type {
+  .form-group, p { margin-bottom: 0; }
+}

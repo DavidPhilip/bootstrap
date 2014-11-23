@@ -1,0 +1,128 @@
+.sidebar {
+  #gradient > .vertical(lighten(@gray-dark, 5%);@gray-dark;0%;100%);
+  background-color: @gray-dark;
+  bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  .navbar-toggle {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+  }
+  
+  .avatar {
+    height: 265px;
+    padding: 23px 0 0 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    
+    .gradient {
+      #gradient > .vertical(rgba(0,0,0,0);rgba(0,0,0,.7);0%;100%);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    
+    .blurry {
+      background-position: center center;
+      background-size: cover;
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    
+    .wrapper {
+      position: relative;
+      z-index: 3;
+      
+      .logo { margin: 0 auto; }
+      
+      .user-image {
+        margin: 29px 0 0 0;
+        img { margin: 0 auto; }
+      }
+      
+      .user-slug {
+        color: @gray-light;
+        font-size: @font-size-large;
+        margin: 13px 0 0 0;
+      }
+    }
+  }
+  
+  .nav-sidebar {
+    padding: 20px 0;
+    border-top: 1px solid #5d5d5d; // TODO: Move color definition into ab_variables.less
+    
+    &:first-child {
+      border: none;
+      padding: 0;
+    }
+    
+    .headline {
+      padding: 0 20px;
+      text-transform: uppercase;
+      color: #9b9b9b; // TODO: Move color definition into ab_variables.less
+    }
+    
+    & > li,
+    .sidebar__active-dropdown__menu > li {
+      &.first { margin: 20px 0 0 0; }
+      
+      & > a {
+        color: @gray-light;
+        text-transform: uppercase;
+        font-size: @font-size-medium;
+        padding: 12px 20px;
+        
+        i.fa { width: 30px; }
+      }
+      
+      &.active > a, & > a:hover, & > a:focus {
+        color: #fff;
+        background-color: @gray-darker;
+      } 
+    }
+  }
+}
+
+.active-dropdown:hover,
+.sidebar__active-dropdown:hover {
+  cursor: pointer;
+}
+
+.sidebar__active-dropdown.open {
+  .dropdown-toggle  {
+    position: relative;
+    z-index: 9999;
+  }
+}
+
+.dropdown-toggle i.fa { margin-left: 10px; }
+
+.sidebar__active-dropdown__menu {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  background-color: #414141;
+  border: 0;
+  padding: 60px 0 0 0;
+  top: -20px;
+  
+  & > li:first-child { border-top: 1px solid #5d5d5d; }
+  & > li.hotlink {
+    border-top: 1px solid #5d5d5d;
+  }
+}
