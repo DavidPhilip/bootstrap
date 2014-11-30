@@ -1,24 +1,26 @@
 .card {
+  border-bottom: 1px solid @gray-light;
   cursor: pointer;
   overflow: hidden;
+  padding: 40px 0;
   position: relative;
-  
-  .inner {
-    border-bottom: 1px solid @gray-light;
-    padding: 40px 0;
-    text-align: center;
-  }
+  text-align: center;
   
   img {
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
   }
-  
-  .info {
-    text-align: center;
-    h3 { margin-top: 20px; }
-  }
-  
-  .edit {
-    margin-top: 20px;
+}
+
+.card__info,
+.card__actions {
+  margin-top: 20px;
+}
+
+.card__actions {
+  a + .btn,
+  .btn + a,
+  a + a,
+  .btn + .btn {
+    margin-left: 10px;
   }
 }
