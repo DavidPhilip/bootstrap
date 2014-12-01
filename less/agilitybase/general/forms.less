@@ -8,6 +8,7 @@ form {
   
   .form-group {
     margin-bottom: @line-height-computed;
+    position: relative;
     
     > div { position: relative; }
     
@@ -29,6 +30,34 @@ form {
       .group-label {
         margin-bottom: 3px;
       }
+    }
+    
+    .fa-question {
+      color: @gray-light;
+      position: absolute;
+      right: 5px;
+      text-decoration: none;
+      bottom: 5px;
+      z-index: 1;
+      
+      &:hover, &:focus {
+        color: @brand-primary;
+      }
+    }
+  }
+  
+  .form-group--checkbox {
+    overflow: hidden;
+    
+    input.form-control.floatlabel {
+      height: 24px;
+      margin: 0;
+      width: auto;
+    }
+    
+    label {
+      color: @gray-mid;
+      margin: 0;
     }
   }
   

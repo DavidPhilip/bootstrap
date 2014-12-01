@@ -56,5 +56,9 @@ form > .actionbar--wrapper {
 }
 
 .actionbar--wrapper div.row:last-of-type {
-  .form-group, p { margin-bottom: 0; }
+  @media screen and (min-width: @screen-sm-min) {
+    .form-group, p { margin-bottom: 0; }
+  }
 }
+
+
