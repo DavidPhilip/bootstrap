@@ -1,5 +1,34 @@
+.media-xs-block {
+  @media (max-width: @screen-sm-max) { width: 100%; }
+}
+
+.media-sm-block {
+  @media (min-width: @screen-sm-min) { width: 100%; }
+}
+
+.media-md-block {
+  @media (min-width: @screen-md-min) { width: 100%; }
+}
+
+.media-lg-block {
+  @media (min-width: @screen-lg-min) { width: 100%; }
+}
+
 .media-block {
   width: 100%;
+}
+
+.media-nowrap {
+  @media (min-width: @screen-md-min) { white-space: nowrap; }
+}
+
+.media-stacks {
+  @media (max-width: @screen-sm-max) {
+    display: block;
+    padding: 20px 0 0 0;
+    position: relative;
+    width: 100%;
+  }
 }
 
 .media-right__button-group {

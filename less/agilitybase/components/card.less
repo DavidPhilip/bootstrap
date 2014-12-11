@@ -1,4 +1,5 @@
 .card {
+  .transition(~"background-color 0.15s");
   border-bottom: 1px solid @gray-light;
   cursor: pointer;
   overflow: hidden;
@@ -9,6 +10,11 @@
   img {
     margin: 0 auto;
   }
+}
+
+.card:hover {
+  background-color: @gray-lighter;
+  cursor: pointer;
 }
 
 .card__info,
